@@ -23,6 +23,7 @@ $compact-header-height: 35;
 .select-dropdown__container {
 	position: relative;
 	display: inline-block;
+	max-width: 100%;
 
 	.select-dropdown.is-open & {
 		z-index: z-index( 'root', '.select-dropdown.is-open .select-dropdown__container' );
@@ -160,7 +161,6 @@ $compact-header-height: 35;
 	font-size: 14px;
 	font-weight: 400;
 	white-space: nowrap;
-	text-overflow: ellipsis;
 	overflow: hidden;
 	cursor: pointer;
 
@@ -220,10 +220,12 @@ $compact-header-height: 35;
 
 .select-dropdown__item-text {
 	white-space: nowrap;
+	overflow: hidden;
 	text-overflow: ellipsis;
 	color: inherit;
 	position: absolute;
 		left: #{ $side-margin }px;
+		right: #{ $side-margin }px;
 }
 
 .select-dropdown__separator {
